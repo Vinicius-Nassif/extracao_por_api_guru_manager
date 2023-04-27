@@ -1,9 +1,9 @@
-import requests
-import pandas as pd
-from tk import token 
+import requests # Realizar as chamadas HTTP
+import pandas as pd # Criar e maninmular dataframes
+from tk import token # Importa a chave de autenticação da API
 
 class API_transactions():
-    def __init__(self, url, arquivo):
+    def __init__(self, url, arquivo): # Define o construtor de classe
         # Alocando argumentos
         self.url = url 
         self.nome_arquivo = arquivo
@@ -16,7 +16,9 @@ class API_transactions():
     def acesso(self):
         # Definindo as variáveis da API de transações e o token
         ## Inserindo a chave 
-        headers = {
+        ## Define um dicionário com as infomrácÕes de autenticação 
+        ### Define o tipo de conteúdo e da respostas da API
+        headers = { 
             "Authorization": f"Bearer {token}",
             "Content-Type":"aplication/json",
             "Accept":"application/json"
@@ -24,7 +26,9 @@ class API_transactions():
         self.response = requests.get(self.url, headers=headers)
 
     def extracao(self):
-        self.data = self.response.json()
+        # Define o método de extração, ue extrai os dados da API e armazena em um lista
+        ## Converte os dados da API para o formato JSON e define as transações como dados relevantes
+        self.data = self.response.json() 
         transactions = self.data['data']
 
         # Automação da busca
