@@ -50,7 +50,7 @@ Nesse módulo, foi especificado apenas a variável Token recebendo a chave de ac
 
 O Projeto teve início com a importação das bibliotecas e módulos utilizados na elaboração do código em python. 
 
-![1](https://user-images.githubusercontent.com/111388699/234991708-9848dca9-30af-4c24-94a8-f57002909f49.png)
+![1](https://user-images.githubusercontent.com/111388699/234992801-531aad19-880e-41d8-87e0-da012789d3c0.png)
 
 A biblioteca `requests` é utilizada para realizar requisições HTTP em Python. Neste script, ela é utilizada para realizar a requisição GET na API de transações e armazenar o resultado em uma variável.
 
