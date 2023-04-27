@@ -50,7 +50,7 @@ Nesse módulo, foi especificado apenas a variável Token recebendo a chave de ac
 
 O Projeto teve início com a importação das bibliotecas e módulos utilizados na elaboração do código em python. 
 
-![Imagem 1](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\1.png)
+![1](https://user-images.githubusercontent.com/111388699/234991708-9848dca9-30af-4c24-94a8-f57002909f49.png)
 
 A biblioteca `requests` é utilizada para realizar requisições HTTP em Python. Neste script, ela é utilizada para realizar a requisição GET na API de transações e armazenar o resultado em uma variável.
 
@@ -68,7 +68,7 @@ A classe `API_transactions` é o coração do script e é composta por quatro m�
 
 O método `__init__` é o construtor da classe. Ele recebe como argumentos a URL da API de transações e o nome do arquivo a ser gerado. 
 
-![Imagem 2](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\2.png)
+![2](https://user-images.githubusercontent.com/111388699/234991745-4e2b50d7-3c04-4fee-a80b-95f53397c8c6.png)
 
 Ele inicializa os seguintes objetos:
 
@@ -88,7 +88,7 @@ Ele inicializa os seguintes objetos:
 
 O método `acesso` é responsável por acessar a API de transações e obter as informações desejadas. Ele utiliza a biblioteca `requests` para fazer uma requisição GET à URL da API. 
 
-![Imagem 3](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\3.png)
+![3](https://user-images.githubusercontent.com/111388699/234991779-0e556646-f86a-4bbe-aace-d00784a28546.png)
 
 O token de acesso é inserido no header da requisição para autenticar a consulta. O resultado é armazenado em `self.response`.O token de acesso é inserido no header da requisição para autenticar a consulta e é definido um dicionário com as informações de autenticação em formato JSON para o tipo de conteúdo e da resposta da API.
 
@@ -100,7 +100,7 @@ O resultado é armazenado em `self.response`.
 
 O método `extracao` é responsável por extrair as informações relevantes da resposta da API e armazená-las em uma lista. 
 
-![Imagem 4](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\4.png)
+![4](https://user-images.githubusercontent.com/111388699/234991808-f83caa68-f792-4cbb-8a90-390723ec803d.png)
 
 A função começa convertendo a resposta da requisição para um formato JSON, que é mais fácil de manipular. Em seguida, ela busca as transações na resposta da API e percorre cada uma delas em um laço `for`.
 
@@ -121,7 +121,7 @@ Além disso, a função formata o valor total da transação e o valor de cada p
 
 Ao final do método, as informações armazenadas no dataframe `self.data_transaction` serão utilizadas para criar uma tabela no formato de arquivo excel.
 
-![Imagem 5](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\5.png)
+![5](https://user-images.githubusercontent.com/111388699/234991861-23c9dd78-7354-4394-a5df-5b2bc3ac3037.png)
 
 
 
@@ -131,7 +131,7 @@ A função `criar_tabela` cria um DataFrame do Pandas a partir da lista `self.da
 
 Em seguida, a função utiliza o método `to_excel` para salvar o DataFrame em um arquivo Excel chamado 'transactions.xlsx', sem incluir a coluna de índice.
 
-![Imagem 6](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\6.png)
+![6](https://user-images.githubusercontent.com/111388699/234991933-1ebc9e0d-cf14-4845-9c1c-564887a58fa5.png)
 
 
 
@@ -139,7 +139,7 @@ Em seguida, a função utiliza o método `to_excel` para salvar o DataFrame em u
 
 Este trecho de código representa a execução principal do script. Quando o módulo é executado diretamente, a condição `if __name__ == "__main__"` é verdadeira e o código dentro dela é executado.
 
-![Imagem 7](C:\Users\Vinicius\Documents\Projetos AD\Artigos\Extração de dados por API - Guru Digital Manager\7.png)
+![7](https://user-images.githubusercontent.com/111388699/234991961-5df7f431-90cc-4495-bba7-4d0ef8b9a241.png)
 
 1. `produtos = API_transactions(url="https://digitalmanager.guru/api/v1/transactions/", arquivo='transactions.xlsx')`: Cria uma instância da classe `API_transactions` passando a URL da API e o nome do arquivo onde a tabela de transações será salva.
 2. `produtos.acesso()`: Chama o método `acesso()` da instância criada, que realiza a solicitação GET na URL da API com o token de autenticação.
