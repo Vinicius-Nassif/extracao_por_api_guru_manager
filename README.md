@@ -68,7 +68,7 @@ A classe `API_transactions` é o coração do script e é composta por quatro m�
 
 O método `__init__` é o construtor da classe. Ele recebe como argumentos a URL da API de transações e o nome do arquivo a ser gerado. 
 
-![2](https://user-images.githubusercontent.com/111388699/234991745-4e2b50d7-3c04-4fee-a80b-95f53397c8c6.png)
+![2](https://user-images.githubusercontent.com/111388699/234993860-d30eface-f7d6-4c20-b46b-b7c1bf25e711.png)
 
 Ele inicializa os seguintes objetos:
 
@@ -88,7 +88,7 @@ Ele inicializa os seguintes objetos:
 
 O método `acesso` é responsável por acessar a API de transações e obter as informações desejadas. Ele utiliza a biblioteca `requests` para fazer uma requisição GET à URL da API. 
 
-![3](https://user-images.githubusercontent.com/111388699/234991779-0e556646-f86a-4bbe-aace-d00784a28546.png)
+![3](https://user-images.githubusercontent.com/111388699/234993906-7dece6eb-d359-4613-b8c5-8f6924e7a0ea.png)
 
 O token de acesso é inserido no header da requisição para autenticar a consulta. O resultado é armazenado em `self.response`.O token de acesso é inserido no header da requisição para autenticar a consulta e é definido um dicionário com as informações de autenticação em formato JSON para o tipo de conteúdo e da resposta da API.
 
